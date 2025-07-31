@@ -26,6 +26,11 @@
         Four = 4,
 
         /// <summary>
+        /// OpenHAB V5
+        /// </summary>
+        Five = 5,
+
+        /// <summary>
         /// Used when no connection is available
         /// </summary>
         None,
