@@ -4,7 +4,6 @@
 	  xmlns:converters="using:OpenHAB.Windows.Converters"
 	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-	  xmlns:core="using:Microsoft.Xaml.Interactions.Core"
 	  xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
 	  xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
 	  mc:Ignorable="d"
@@ -90,9 +89,9 @@
 								  Tapped="ConnectionSettingsListViewItem_Tapped" />
 					<ListViewItem x:Uid="MenuLogsView">
 						<interactivity:Interaction.Behaviors>
-							<core:EventTriggerBehavior EventName="Tapped">
-								<core:NavigateToPageAction TargetPage="OpenHAB.Windows.View.LogViewerPage" />
-							</core:EventTriggerBehavior>
+                            <interactivity:EventTriggerBehavior EventName="Tapped">
+                                <interactivity:NavigateToPageAction TargetPage="OpenHAB.Windows.View.LogViewerPage" />
+							</interactivity:EventTriggerBehavior>
 						</interactivity:Interaction.Behaviors>
 					</ListViewItem>
 				</ListView>
@@ -108,9 +107,9 @@
                                        Foreground="White"
                                        Icon="Cancel">
                             <interactivity:Interaction.Behaviors>
-                                <core:EventTriggerBehavior EventName="Tapped">
-                                    <core:NavigateToPageAction TargetPage="OpenHAB.Windows.View.MainPage" />
-                                </core:EventTriggerBehavior>
+                                <interactivity:EventTriggerBehavior EventName="Tapped">
+                                    <interactivity:NavigateToPageAction TargetPage="OpenHAB.Windows.View.MainPage" />
+                                </interactivity:EventTriggerBehavior>
                             </interactivity:Interaction.Behaviors>
                         </AppBarButton>
                     </CommandBar>

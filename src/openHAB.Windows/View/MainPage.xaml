@@ -2,7 +2,6 @@
 	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	  xmlns:converters="using:OpenHAB.Windows.Converters"
-	  xmlns:core="using:Microsoft.Xaml.Interactions.Core"
 	  xmlns:community="using:Microsoft.Toolkit.Uwp.UI.Controls"
 	  xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
 	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -206,9 +205,9 @@
 								   Glyph="&#xE939;" />
 					</muxc:NavigationViewItem.Icon>
 					<interactivity:Interaction.Behaviors>
-						<core:EventTriggerBehavior EventName="Tapped">
-							<core:InvokeCommandAction Command="{x:Bind Vm.FeedbackCommand}" />
-						</core:EventTriggerBehavior>
+                        <interactivity:EventTriggerBehavior EventName="Tapped">
+                            <interactivity:InvokeCommandAction Command="{x:Bind Vm.FeedbackCommand}" />
+						</interactivity:EventTriggerBehavior>
 					</interactivity:Interaction.Behaviors>
 				</muxc:NavigationViewItem>
 			</muxc:NavigationView.FooterMenuItems>
@@ -259,9 +258,9 @@
 							<Button x:Name="SettingsButtonInfoNotification"
 								x:Uid="InfoAppBarSettingsButton">
 								<interactivity:Interaction.Behaviors>
-									<core:EventTriggerBehavior EventName="Tapped">
-										<core:NavigateToPageAction TargetPage="OpenHAB.Windows.View.SettingsPage" />
-									</core:EventTriggerBehavior>
+                                    <interactivity:EventTriggerBehavior EventName="Tapped">
+                                        <interactivity:NavigateToPageAction TargetPage="OpenHAB.Windows.View.SettingsPage" />
+									</interactivity:EventTriggerBehavior>
 								</interactivity:Interaction.Behaviors>
 							</Button>
 						</muxc:InfoBar.ActionButton>

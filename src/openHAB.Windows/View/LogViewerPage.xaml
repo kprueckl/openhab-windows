@@ -3,7 +3,6 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      xmlns:core="using:Microsoft.Xaml.Interactions.Core"
       xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
       mc:Ignorable="d">
 
@@ -28,9 +27,9 @@
                            Foreground="White"
                               Icon="Back">
                 <interactivity:Interaction.Behaviors>
-                    <core:EventTriggerBehavior EventName="Tapped">
-                        <core:NavigateToPageAction TargetPage="OpenHAB.Windows.View.SettingsPage" />
-                    </core:EventTriggerBehavior>
+                    <interactivity:EventTriggerBehavior EventName="Tapped">
+                        <interactivity:NavigateToPageAction TargetPage="OpenHAB.Windows.View.SettingsPage" />
+                    </interactivity:EventTriggerBehavior>
                 </interactivity:Interaction.Behaviors>
             </AppBarButton>
             <CommandBar.Content>
